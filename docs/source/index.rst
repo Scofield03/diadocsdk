@@ -58,7 +58,15 @@
      http_methods
      protos
      lists
+
+.. toctree::
+   :name: examples
+   :caption: Примеры использования
+   :titlesonly:
    
+   Как авторизоваться в системе <howto/example_authorization>
+   Как отправить счет-фактуру <howto/example_send_invoice>
+
 .. toctree::
    :name: others
    :caption: История изменений

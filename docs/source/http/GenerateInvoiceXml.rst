@@ -7,13 +7,13 @@ HTTP метод: **POST**
 
 Параметры строки запроса:
 
--  *invoiceType* - тип изготавливаемого документа; принимает одно из значений "Invoice", "InvoiceRevision", "InvoiceCorrection" или "InvoiceCorrectionRevision"; параметр может отсутствовать; значение по умолчанию - "Invoice".
+-  *invoiceType* - тип изготавливаемого документа; принимает одно из значений *Invoice*, *InvoiceRevision*, *InvoiceCorrection* или *InvoiceCorrectionRevision*; параметр может отсутствовать; значение по умолчанию - *Invoice*.
 
    *disableValidation* - отключение валидации полученного Xml документа по формату ФНС; параметр может отсутствовать;
 
 В запросе должен присутствовать HTTP-заголовок ``Authorization`` с необходимыми данными для :doc:`авторизации <../Authorization>`.
 
-В теле запроса должны содержаться данные для изготовления СФ/ИСФ/КСФ/ИКСФ, в виде сериализованной структуры :doc:`../proto/InvoiceInfo` для типов документов Invoice или InvoiceRevision и в виде сериализованной структуры :doc:`../proto/InvoiceCorrectionInfo` для типов документов InvoiceCorrection или InvoiceCorrectionRevision.
+В теле запроса должны содержаться данные для изготовления СФ/ИСФ/КСФ/ИКСФ, в виде сериализованной структуры :doc:`../proto/InvoiceInfo` для типов документов *Invoice* или *InvoiceRevision* и в виде сериализованной структуры :doc:`../proto/InvoiceCorrectionInfo` для типов документов *InvoiceCorrection* или *InvoiceCorrectionRevision*.
 
 В теле ответа содержится XML-файл СФ/ИСФ/КСФ/ИКСФ, построенный на основании данных из запроса. Файл СФ/ИСФ изготавливается в соответствии с `XML-схемой <https://diadoc.kontur.ru/sdk/xsd/ON_SFAKT_1_897_01_05_01_02.xsd>`, которой должны удовлетворять XML-счета-фактуры, согласно приказа ФНС.
 
